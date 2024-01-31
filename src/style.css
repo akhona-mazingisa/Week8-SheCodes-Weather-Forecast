@@ -77,10 +77,8 @@ main {
 }
 
 .weather-app-icon {
-    font-size: 100;
     width: 88px;
     height: 88px;
-    margin-top: 22px;
 }
 
 .weather-app-unit {
@@ -92,7 +90,6 @@ main {
     display: flex;
     margin-top: 30px;
     justify-content: space-around;
-    color: black;
 }
 
 .weather-forecast-date {
@@ -101,10 +98,6 @@ main {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 10px;
-}
-
-.weather-forcast-temperature {
-    padding: 0 10px;
 }
 
 .weather-forecast-temperatures {
@@ -120,6 +113,10 @@ main {
     height: 48px;
     display: block;
     margin: 0 auto;
+}
+
+.weather-forcast-temperature {
+    padding: 0 10px;
 }
 
 footer {

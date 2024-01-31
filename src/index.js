@@ -63,7 +63,7 @@ function formatDay(timeStamp) {
 
 function getForecast(city) {
     let apiKey = "91f042445cc032dfc6bc53dof6caf21t";
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metrics`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
     axios(apiUrl).then(displayForecast);
 }
 
@@ -73,8 +73,8 @@ function displayForecast(response) {
     response.data.daily.forEach(function (day, index) {
         if (index < 5) {
         forecastHtml = 
-        forecastHtml +
-        `
+            forecastHtml +
+            `
         <div class="weather-forecast-day">
         <div class="weather-forecast-date">${formatDay(day.time)}</div>
     
@@ -83,7 +83,9 @@ function displayForecast(response) {
             <div class="weather-forecast-temperature">
                 <strong>${Math.round(day.temperature.maximum)}°</strong>
             </div>
-            <div class="weather-forecast-temperature">${Math.round(day.temperature.minimum)}°</div>
+            <div class="weather-forecast-temperature">${Math.round(
+                day.temperature.minimum
+            )}°</div>
         </div>
     </div>
     `;
